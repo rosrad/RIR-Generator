@@ -9,7 +9,7 @@ end
 
 function circle_rir(beta)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-out_dir='./rir/';
+out_dir='../rir/';
 %beta =0.3;
 fs = 16000;
 rir_dir = [out_dir,'/t60_',num2str(beta)];
@@ -28,7 +28,7 @@ function h = rir (mic, source, beta,fs)
     c =340;
     L = [7 6 3];
     mtype = 'omnidirectional';    % Type of microphone
-    order = 5;                               % -1 equals maximum reflection order!
+    order = -1;                               % -1 equals maximum reflection order!
     dim = 3;                                   % Room dimension
     orientation = [pi/2, 0];                    % Microphone orientation (rad)
     hp_filter = 0;                             % Disable high-pass filter
